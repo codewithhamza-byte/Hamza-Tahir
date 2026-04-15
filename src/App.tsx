@@ -9,7 +9,6 @@ import WhoAmI from "./components/WhoAmI";
 import HowItWorks from "./components/HowItWorks";
 import Contact from "./components/Contact";
 import { motion, useScroll, useSpring } from "motion/react";
-import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -28,7 +27,6 @@ export default function App() {
       />
 
       <Navbar />
-      <Analytics />
       
       <main className="pt-0">
         <Hero />

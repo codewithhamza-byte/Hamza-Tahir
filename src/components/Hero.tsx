@@ -98,7 +98,7 @@ export default function Hero() {
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-100">
-                    <img src="/hamza-tahir.webp" alt="Client" className="w-full h-full object-cover" />
+                    <img src="public/hamza-tahir.webp" alt="Client" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
@@ -116,13 +116,10 @@ export default function Hero() {
             className="relative z-20 w-[300px] md:w-[500px] aspect-[4/5] flex items-end justify-center"
           >
             <img 
-              src="/hamza-tahir.webp" 
+              src="public/hamza-tahir.webp" 
               alt="Hamza Tahir" 
               className="w-full h-full object-contain grayscale"
               referrerPolicy="no-referrer"
-              onError={(e) => {
-                e.currentTarget.src = "/untitled-design-2.png";
-              }}
             />
             {/* Bottom Fade */}
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />
