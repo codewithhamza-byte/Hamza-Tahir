@@ -28,7 +28,7 @@ export default function Contact() {
     <section id="contact" className="py-20">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8">
         {/* Left Column: Project Details Form */}
-        <div className="bg-white dark:bg-[#0a0a0a] border border-gray-100 dark:border-white/5 rounded-3xl p-8 md:p-12 shadow-sm">
+        <div className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
           <div className="flex items-center gap-4 mb-12">
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
               <Briefcase className="w-6 h-6" />
@@ -43,25 +43,25 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Full Name */}
               <div className="space-y-4">
-                <label className="text-sm font-semibold flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-semibold flex items-center gap-2 text-foreground">
                   <User className="w-4 h-4 text-primary" />
                   Full Name *
                 </label>
                 <input 
                   type="text" 
-                  className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" 
+                  className="w-full bg-muted/50 border border-border rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-foreground placeholder:text-muted-foreground/50" 
                   placeholder="John Doe" 
                 />
               </div>
               {/* Email Address */}
               <div className="space-y-4">
-                <label className="text-sm font-semibold flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-semibold flex items-center gap-2 text-foreground">
                   <Mail className="w-4 h-4 text-primary" />
                   Email Address *
                 </label>
                 <input 
                   type="email" 
-                  className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" 
+                  className="w-full bg-muted/50 border border-border rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-foreground placeholder:text-muted-foreground/50" 
                   placeholder="john@example.com" 
                 />
               </div>
@@ -69,10 +69,10 @@ export default function Contact() {
 
             {/* Phone Number */}
             <div className="space-y-4">
-              <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Phone Number</label>
+              <label className="text-sm font-semibold text-foreground">Phone Number</label>
               <input 
                 type="tel" 
-                className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" 
+                className="w-full bg-muted/50 border border-border rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-foreground placeholder:text-muted-foreground/50" 
                 placeholder="+92 (308) 502-6488" 
               />
             </div>
@@ -80,9 +80,9 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Service Needed */}
               <div className="space-y-4">
-                <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Service Needed *</label>
+                <label className="text-sm font-semibold text-foreground">Service Needed *</label>
                 <div className="relative">
-                  <select defaultValue="" className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm appearance-none cursor-pointer">
+                  <select defaultValue="" className="w-full bg-muted/50 border border-border rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm appearance-none cursor-pointer text-foreground">
                     <option value="" disabled>Select a service</option>
                     <option value="shopify">Shopify Optimization</option>
                     <option value="seo">Ecommerce SEO</option>
@@ -93,9 +93,9 @@ export default function Contact() {
               </div>
               {/* Project Type */}
               <div className="space-y-4">
-                <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Project Type</label>
+                <label className="text-sm font-semibold text-foreground">Project Type</label>
                 <div className="relative">
-                  <select defaultValue="" className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm appearance-none cursor-pointer">
+                  <select defaultValue="" className="w-full bg-muted/50 border border-border rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm appearance-none cursor-pointer text-foreground">
                     <option value="" disabled>Select project type</option>
                     <option value="new">New Store</option>
                     <option value="redesign">Redesign</option>
@@ -108,15 +108,15 @@ export default function Contact() {
 
             {/* Project Description */}
             <div className="space-y-4">
-              <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Project Description *</label>
+              <label className="text-sm font-semibold text-foreground">Project Description *</label>
               <textarea 
                 rows={6} 
-                className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm resize-none" 
+                className="w-full bg-muted/50 border border-border rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm resize-none text-foreground placeholder:text-muted-foreground/50" 
                 placeholder="Tell me about your project, goals, and any specific requirements..." 
               />
             </div>
 
-            <Button className="w-full bg-primary hover:bg-primary/90 text-white py-8 text-lg font-bold rounded-2xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3">
+            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-8 text-lg font-bold rounded-2xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3">
               <Send className="w-5 h-5" />
               Send Message
             </Button>
@@ -126,7 +126,7 @@ export default function Contact() {
         {/* Right Column: Sidebar */}
         <div className="space-y-8">
           {/* Contact Information */}
-          <div className="bg-white dark:bg-[#0a0a0a] border border-gray-100 dark:border-white/5 rounded-3xl p-8 shadow-sm">
+          <div className="bg-card border border-border rounded-3xl p-8 shadow-sm">
             <h3 className="text-lg font-bold mb-8">Contact Information</h3>
             <div className="space-y-8">
               <div className="flex items-start gap-4">
@@ -159,7 +159,7 @@ export default function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="mt-12 pt-8 border-t border-gray-100 dark:border-white/5">
+            <div className="mt-12 pt-8 border-t border-border">
               <div className="text-[10px] text-muted-foreground mb-6 uppercase tracking-[0.2em] font-bold">Connect With Me</div>
               <div className="flex gap-4">
                 {socials.map((social, i) => (
@@ -168,7 +168,7 @@ export default function Contact() {
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+                    className="w-12 h-12 rounded-xl bg-muted/50 border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
                     title={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -179,7 +179,7 @@ export default function Contact() {
           </div>
 
           {/* Why Choose Me? */}
-          <div className="bg-white dark:bg-[#0a0a0a] border border-gray-100 dark:border-white/5 rounded-3xl p-8 shadow-sm">
+          <div className="bg-card border border-border rounded-3xl p-8 shadow-sm">
             <h3 className="text-lg font-bold mb-8">Why Choose Me?</h3>
             <div className="space-y-6">
               <div className="flex items-center gap-4">

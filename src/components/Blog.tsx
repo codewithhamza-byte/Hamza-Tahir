@@ -44,7 +44,7 @@ export default function Blog() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-white/5 hover:bg-white/5 transition-all px-4 -mx-4 rounded-xl"
+            className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-border hover:bg-muted/50 transition-all px-4 -mx-4 rounded-xl"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-8 mb-4 md:mb-0">
               <span className="font-mono text-xs text-muted-foreground tracking-widest">
@@ -64,7 +64,7 @@ export default function Blog() {
                   {post.readTime}
                 </span>
               </div>
-              <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary group-hover:bg-primary group-hover:text-background transition-all">
+              <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                 <ArrowUpRight className="w-5 h-5" />
               </div>
             </div>

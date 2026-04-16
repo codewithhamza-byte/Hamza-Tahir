@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
-import aboutMeImg from "../assets/about-me.webp";
 
 export default function About() {
   const values = [
@@ -11,20 +10,20 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-white">
+    <section id="about" className="py-32 bg-background transition-colors duration-300">
       <div className="flex flex-col items-center mb-24">
-        <div className="text-[#6366f1] font-serif italic text-xl mb-12 self-start px-6 md:px-12">// About</div>
+        <div className="text-primary font-serif italic text-xl mb-12 self-start px-6 md:px-12">// About</div>
         
-        <div className="relative inline-flex items-center bg-[#525252] rounded-full p-1.5 pr-8 gap-4 shadow-2xl mb-16 group hover:scale-105 transition-transform">
-          <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-3xl shadow-inner">
+        <div className="relative inline-flex items-center bg-gray-800 dark:bg-gray-800 rounded-full p-1.5 pr-8 gap-4 shadow-2xl mb-16 group hover:scale-105 transition-transform">
+          <div className="w-14 h-14 rounded-full bg-white dark:bg-gray-900 flex items-center justify-center text-3xl shadow-inner">
             🚀
           </div>
           <span className="text-white text-xl font-bold tracking-tight">Shopify Expert</span>
         </div>
 
-        <h2 className="text-4xl md:text-9xl font-black text-center leading-[0.9] tracking-tighter max-w-6xl text-gray-900 px-4">
+        <h2 className="text-4xl md:text-9xl font-black text-center leading-[0.9] tracking-tighter max-w-6xl text-foreground px-4">
           Beyond the Lens, <br />
-          <span className="text-gray-300">A Storyteller at Heart</span>
+          <span className="text-muted-foreground/30">A Storyteller at Heart</span>
         </h2>
       </div>
 
@@ -37,7 +36,7 @@ export default function About() {
         >
           <div className="aspect-[3/4] rounded-3xl overflow-hidden border border-white/5 teal-glow">
             <img 
-              src={aboutMeImg} 
+              src="/about-me.webp" 
               alt="Hamza Tahir" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

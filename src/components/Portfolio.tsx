@@ -77,15 +77,15 @@ export default function Portfolio() {
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-card border-white/5 overflow-hidden group hover:border-primary/30 transition-all duration-500 hover-glow rounded-2xl">
+            <Card className="bg-card border-border overflow-hidden group hover:border-primary/30 transition-all duration-500 hover-glow rounded-2xl">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 dark:brightness-90"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 text-center">
+                <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 text-center">
                   <TrendingUp className="w-8 h-8 text-primary mb-4" />
                   <span className="text-2xl font-bold text-primary mb-2">{project.result}</span>
                   <span className="text-sm text-muted-foreground mb-6">{project.metric}</span>

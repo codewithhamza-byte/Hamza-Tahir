@@ -52,15 +52,15 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className={`relative bg-white dark:bg-gray-900 rounded-[32px] p-10 shadow-xl border border-gray-100 dark:border-white/5 md:${step.rotation} hover:rotate-0 transition-transform duration-500 z-10`}
+              className={`relative bg-card rounded-[32px] p-10 shadow-xl border border-border md:${step.rotation} hover:rotate-0 transition-transform duration-500 z-10`}
             >
-              <div className="text-6xl font-black text-[#6366f1] mb-12 opacity-90">
+              <div className="text-6xl font-black text-primary mb-12 opacity-90">
                 {step.number}
               </div>
-              <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-4">
+              <h3 className="text-3xl font-black text-foreground mb-4">
                 {step.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 {step.description}
               </p>
             </motion.div>

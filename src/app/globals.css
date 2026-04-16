@@ -118,6 +118,12 @@
   .purple-glow {
     @apply shadow-[0_0_15px_rgba(168,85,247,0.2)];
   }
+  .teal-glow {
+    @apply shadow-[0_0_15px_rgba(45,212,191,0.2)];
+  }
+  .purple-glow {
+    @apply shadow-[0_0_15px_rgba(168,85,247,0.2)];
+  }
   .hover-glow {
     @apply hover:shadow-[0_0_20px_rgba(45,212,191,0.15)] transition-all duration-300;
   }

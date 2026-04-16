@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { Twitter, Linkedin, Instagram } from "lucide-react";
-import profilePic from "../assets/hamza-tahir-who-am-i.webp";
 
 const timeline = [
   {
@@ -27,7 +26,7 @@ const timeline = [
 
 export default function WhoAmI() {
   return (
-    <section id="who-am-i" className="py-32 bg-gray-50 dark:bg-[#050505] border-y border-gray-100 dark:border-white/5">
+    <section id="who-am-i" className="py-32 bg-muted/30 dark:bg-muted/10 border-y border-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="mb-20">
@@ -43,10 +42,10 @@ export default function WhoAmI() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-8xl font-black text-gray-900 dark:text-white tracking-tighter leading-none"
+            className="text-4xl md:text-8xl font-black text-foreground tracking-tighter leading-none"
           >
             Pushing Boundaries <br />
-            <span className="text-gray-400/50 font-light italic">since 2011</span>
+            <span className="text-muted-foreground/50 font-light italic">since 2011</span>
           </motion.h2>
         </div>
 
@@ -59,11 +58,11 @@ export default function WhoAmI() {
               viewport={{ once: true }}
               className="relative group"
             >
-              <div className="aspect-[4/5] rounded-[48px] overflow-hidden bg-white dark:bg-gray-900 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] dark:shadow-none border border-gray-100 dark:border-white/5">
+              <div className="aspect-[4/5] rounded-[48px] overflow-hidden bg-card shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] dark:shadow-none border border-border">
                 <img 
-                  src={profilePic} 
+                  src="/hamza-tahir-who-am-i.webp" 
                   alt="Hamza Tahir" 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ease-out scale-105 group-hover:scale-100"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ease-out scale-105 group-hover:scale-100 dark:brightness-90"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     console.error("Image failed to load:", e.currentTarget.src);
@@ -74,13 +73,13 @@ export default function WhoAmI() {
               <div className="mt-10 flex justify-between items-center">
                 <div className="flex gap-6">
                   {[Twitter, Linkedin, Instagram].map((Icon, i) => (
-                    <a key={i} href="#" className="text-gray-400 hover:text-primary transition-all hover:-translate-y-1">
+                    <a key={i} href="#" className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1">
                       <Icon className="w-6 h-6" />
                     </a>
                   ))}
                 </div>
                 <div className="text-right">
-                  <h4 className="text-2xl font-black text-gray-900 dark:text-white tracking-tight">Hamza Tahir</h4>
+                  <h4 className="text-2xl font-black text-foreground tracking-tight">Hamza Tahir</h4>
                   <p className="text-primary font-medium text-sm tracking-widest uppercase">Shopify Expert</p>
                 </div>
               </div>
@@ -95,15 +94,15 @@ export default function WhoAmI() {
               viewport={{ once: true }}
               className="mb-20"
             >
-              <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 leading-tight font-medium tracking-tight">
+              <p className="text-2xl md:text-3xl text-foreground leading-tight font-medium tracking-tight">
                 Hi, I’m Hamza Tahir, a passionate web developer who enjoys building modern web applications and automation tools that help businesses grow online.
               </p>
-              <p className="text-lg text-gray-500 dark:text-gray-400 mt-6 leading-relaxed">
+              <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
                 I specialize in creating fast, responsive, and user-friendly websites using technologies like JavaScript, TypeScript, React, Next.js, HTML, CSS, and Tailwind CSS. My focus is not only on building good-looking interfaces but also on developing reliable systems that improve business workflows and save time.
               </p>
             </motion.div>
 
-            <div className="space-y-0 border-t border-gray-200 dark:border-white/10">
+            <div className="space-y-0 border-t border-border">
               {timeline.map((item, index) => (
                 <motion.div 
                   key={index}
@@ -111,11 +110,11 @@ export default function WhoAmI() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex flex-col md:grid md:grid-cols-3 py-8 md:py-10 border-b border-gray-200 dark:border-white/10 items-start md:items-center group hover:bg-white dark:hover:bg-white/5 transition-all px-6 -mx-6 rounded-2xl gap-2 md:gap-0"
+                  className="flex flex-col md:grid md:grid-cols-3 py-8 md:py-10 border-b border-border items-start md:items-center group hover:bg-card transition-all px-6 -mx-6 rounded-2xl gap-2 md:gap-0"
                 >
-                  <span className="text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">{item.role}</span>
-                  <span className="text-gray-500 dark:text-gray-400 md:text-center font-medium">{item.company}</span>
-                  <span className="text-gray-400 dark:text-gray-500 md:text-right font-mono text-xs md:text-sm">{item.period}</span>
+                  <span className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors">{item.role}</span>
+                  <span className="text-muted-foreground md:text-center font-medium">{item.company}</span>
+                  <span className="text-muted-foreground/60 md:text-right font-mono text-xs md:text-sm">{item.period}</span>
                 </motion.div>
               ))}
             </div>
