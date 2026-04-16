@@ -98,7 +98,7 @@ export default function Hero() {
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-100">
-                    <img src="/hamza-tahir.webp" alt="Client" className="w-full h-full object-cover" />
+                    <img src="/hamza-tahir.webp" alt="Client" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                 ))}
               </div>
