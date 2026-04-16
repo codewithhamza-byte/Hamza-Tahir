@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
+import aboutMeImg from "../assets/about-me.webp";
 
 export default function About() {
   const values = [
@@ -36,7 +37,7 @@ export default function About() {
         >
           <div className="aspect-[3/4] rounded-3xl overflow-hidden border border-white/5 teal-glow">
             <img 
-              src="/about-me.webp" 
+              src={aboutMeImg} 
               alt="Hamza Tahir" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

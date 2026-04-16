@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { ArrowRight, Trophy, Linkedin, Facebook, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import portraitImg from "../assets/hamza-tahir-v2.webp";
+import clientAvatar from "../assets/hamza-tahir.webp";
 
 const logos = [
   "FocalPoint", "Screentime", "Segment", "Shutterframe", "Lightspeed", "Mastermind"
@@ -98,7 +100,7 @@ export default function Hero() {
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-100">
-                    <img src="/hamza-tahir.webp" alt="Client" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src={clientAvatar} alt="Client" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                 ))}
               </div>
@@ -116,7 +118,7 @@ export default function Hero() {
             className="relative z-20 w-[300px] md:w-[500px] aspect-[4/5] flex items-end justify-center"
           >
             <img 
-              src="/hamza-tahir-v2.webp" 
+              src={portraitImg} 
               alt="Hamza Tahir" 
               className="w-full h-full object-contain grayscale"
               referrerPolicy="no-referrer"

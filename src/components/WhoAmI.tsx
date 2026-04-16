@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Twitter, Linkedin, Instagram } from "lucide-react";
+import profilePic from "../assets/hamza-tahir-who-am-i.webp";
 
 const timeline = [
   {
@@ -60,7 +61,7 @@ export default function WhoAmI() {
             >
               <div className="aspect-[4/5] rounded-[48px] overflow-hidden bg-white dark:bg-gray-900 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] dark:shadow-none border border-gray-100 dark:border-white/5">
                 <img 
-                  src="/hamza-tahir-who-am-i.webp" 
+                  src={profilePic} 
                   alt="Hamza Tahir" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ease-out scale-105 group-hover:scale-100"
                   referrerPolicy="no-referrer"
