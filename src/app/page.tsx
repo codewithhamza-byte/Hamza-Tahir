@@ -1,15 +1,15 @@
 "use client";
 
-import Navbar from "../components/Sidebar";
-import Hero from "../components/Hero";
-import Portfolio from "../components/Portfolio";
-import Snippets from "../components/Snippets";
-import Blog from "../components/Blog";
-import BentoGrid from "../components/BentoGrid";
-import About from "../components/About";
-import WhoAmI from "../components/WhoAmI";
-import HowItWorks from "../components/HowItWorks";
-import Contact from "../components/Contact";
+import Navbar from "@/components/Sidebar";
+import Hero from "@/components/Hero";
+import Portfolio from "@/components/Portfolio";
+import Snippets from "@/components/Snippets";
+import Blog from "@/components/Blog";
+import BentoGrid from "@/components/BentoGrid";
+import About from "@/components/About";
+import WhoAmI from "@/components/WhoAmI";
+import HowItWorks from "@/components/HowItWorks";
+import Contact from "@/components/Contact";
 import { motion, useScroll, useSpring } from "motion/react";
 
 export default function Home() {
